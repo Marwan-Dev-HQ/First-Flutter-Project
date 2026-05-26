@@ -1,6 +1,10 @@
 void main() {
+  // Calling the function using only the required parameter (takes default values)
   cafeSystem(customerName: "Marwan");
+  
   print("--------------------");
+  
+  // Calling the function and overriding the default values
   cafeSystem(customerName: "omar", sugarCups: 1, coffeeType: "Cappuccino");
 }
 
