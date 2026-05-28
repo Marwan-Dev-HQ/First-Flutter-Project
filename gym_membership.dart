@@ -1,8 +1,10 @@
 void main() {
+  // Creating a standard membership using default plan and duration
   gymMembership(memberName: "Marwan");
 
   print("----------------------------------------");
 
+  // Creating a customized VIP membership overriding the default values
   gymMembership(
     memberName: "Omar",
     planType: "VIP Gold",
@@ -20,4 +22,3 @@ void gymMembership({
   print("Plan Type: $planType");
   print("Duration: $monthsDuration Month(s)");
 }
-
