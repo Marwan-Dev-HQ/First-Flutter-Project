@@ -1,37 +1,46 @@
-void main(){
+void main() {
+  // Creating an instance of SportCar
   var sportCar1 = SportCar();
   sportCar1.hasTurbo = true;
   print("turbo or not: ...${sportCar1.hasTurbo}");
-  sportCar1.drive();
+  sportCar1.drive(); // Calls the overridden drive() method
   
+  // Separation line for clean output
   print("\n-----------");
   
+  // Creating an instance of Truck
   var truck1 = Truck();
   truck1.cargoCapacity = 77;
   print("cargo capacity is :${truck1.cargoCapacity}");
-  truck1.drive();
+  truck1.drive(); // Calls the overridden drive() method
 }
 
+// Parent Class (Super Class)
 class Vehicle {
   int? speed;
-  void drive(){}
+  
+  // Base method to be overridden by child classes
+  void drive() {}
 }
 
-class SportCar extends Vehicle{
+// Child Class inheriting from Vehicle
+class SportCar extends Vehicle {
   bool? hasTurbo;
   
+  // Overriding the parent's drive method for custom behavior
   @override
-  void drive(){
+  void drive() {
     print("the speed is 200 KM/H !");
   }
 }
 
-class Truck extends Vehicle{
+// Child Class inheriting from Vehicle
+class Truck extends Vehicle {
   int? cargoCapacity;
   
+  // Overriding the parent's drive method for custom behavior
   @override
-  void drive(){
+  void drive() {
     print("Truck is moving slowly with heavy cargo!");
   }
 }
-
