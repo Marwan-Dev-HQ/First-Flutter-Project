@@ -1,37 +1,56 @@
-void main(){
-  var manager1=Manager();
-  manager1.name="Marwan";
-  print("Name is :${manager1.name}");
-  manager1.work();
-  manager1.getBonus();
-  print("\n------------");
-  var developer1=Developer();
-  developer1.work();
-  developer1.codeReview();
+void main() {
+  // Creating an instance of Manager
+  var manager1 = Manager();
+  manager1.name = "Marwan"; // Assigning a value to the inherited property
   
+  // Using String Interpolation to print the manager's name
+  print("Name is :${manager1.name}");
+  manager1.work();       // Calls the overridden work() method
+  manager1.getBonus();   // Calls the specific Manager method
+  
+  // Separation line for clean console output
+  print("\n-----------");
+  
+  // Creating an instance of Developer
+  var developer1 = Developer();
+  developer1.work();       // Calls the overridden work() method
+  developer1.codeReview(); // Calls the specific Developer method
 }
-class Employee{
+
+// Parent Class (Super Class)
+class Employee {
   String? name;
-  void work(){print("Employee is performing basic tasks.");
-             }
- 
-             
+  
+  // Base method to be overridden by child classes
+  void work() {
+    print("Employee is performing basic tasks.");
+  }
 }
-  class Manager extends Employee{
-    @override
-    void work(){
-      print("Manager is leading the team and planning!");
-    }
-    void getBonus(){
-      print("Manager gets a high salary bonus!");
-    }
-    }
-class Developer extends Employee{
+
+// Child Class inheriting from Employee
+class Manager extends Employee {
+  // Overriding the parent's work method for custom Manager behavior
   @override
-  void work(){
+  void work() {
+    print("Manager is leading the team and planning!");
+  }
+  
+  // Specific method only available in Manager class
+  void getBonus() {
+    print("Manager gets a high salary bonus!");
+  }
+}
+
+// Child Class inheriting from Employee
+class Developer extends Employee {
+  // Overriding the parent's work method for custom Developer behavior
+  @override
+  void work() {
     print("Developer is writing clean code and fixing bugs!");
   }
-  void codeReview(){
+  
+  // Specific method only available in Developer class
+  void codeReview() {
     print("Reviewing GitHub pull requests.");
   }
 }
