@@ -1,3 +1,4 @@
+// Base class representing a standard card
 class Card {
   String cardNumber;
 
@@ -8,9 +9,11 @@ class Card {
   }
 }
 
+// Child class handling cashback logic and bonus rewards
 class CashBackCard extends Card {
   double bonus;
 
+  // Passing the card number to the super constructor
   CashBackCard({required String myNumber, required this.bonus}) : super(cardNumber: myNumber);
 
   @override
