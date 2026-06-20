@@ -1,0 +1,11 @@
+void main() {
+  Map <String,int> legacyBrands={};
+  legacyBrands["Mercedes"]=1926;
+  legacyBrands["BMW"]=1916;
+  legacyBrands["Porsche"]=1931;
+  if(legacyBrands.containsKey("BMW")) {
+     print("BMW foundation year is in the tracker!");
+  }
+  print("premium car brands : $legacyBrands");
+}
+
