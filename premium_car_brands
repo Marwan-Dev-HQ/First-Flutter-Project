@@ -1,11 +1,17 @@
 void main() {
-  Map <String,int> legacyBrands={};
-  legacyBrands["Mercedes"]=1926;
-  legacyBrands["BMW"]=1916;
-  legacyBrands["Porsche"]=1931;
-  if(legacyBrands.containsKey("BMW")) {
-     print("BMW foundation year is in the tracker!");
+  // Create a map to store luxury car brands and their foundation years
+  Map <String, int> legacyBrands = {};
+
+  // Adding car brands data to the map
+  legacyBrands["Mercedes"] = 1926;
+  legacyBrands["BMW"] = 1916;
+  legacyBrands["Porsche"] = 1931;
+
+  // Check if the "BMW" key exists in the map
+  if (legacyBrands.containsKey("BMW")) {
+     print("BMW foundation year is in the tracker!"); // Confirmation message if found
   }
+
+  // Print the complete map with all stored brands
   print("premium car brands : $legacyBrands");
 }
-
