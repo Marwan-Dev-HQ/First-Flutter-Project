@@ -1,8 +1,10 @@
+// The Great Egypt Class
 class Egypt {
   String leaderTitle;
 
   Egypt({required this.leaderTitle});
 
+  // Method to print the official project welcome
   void sayWelcome() {
     print('====================================');
     print('🔥 WELCOME TO EMPIRE OF EGYPT PROJECT 🔥');
@@ -14,9 +16,11 @@ class Egypt {
 }
 
 void main() {
+  // Creating the instance with your official specs
   Egypt myProject = Egypt(
     leaderTitle: 'Senior Marwan Omar (The Global Developer)'
   );
 
+  // Run the machine
   myProject.sayWelcome();
 }
