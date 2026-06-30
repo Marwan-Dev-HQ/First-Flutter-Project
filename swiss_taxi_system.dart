@@ -1,3 +1,4 @@
+// Base class representing a general transport service
 class TransportService {
   String companyName;
   String city;
@@ -9,12 +10,14 @@ class TransportService {
   }
 }
 
+// Subclass representing a Swiss Taxi
 class SwissTaxi extends TransportService {
   double fareRate;
 
-  SwissTaxi({required String companyName, required this.city, required this.fareRate})
+  SwissTaxi({required String companyName, required String city, required this.fareRate})
       : super(companyName: companyName, city: city);
 
+  // Calculate the total cost of the trip
   void calculateFare(double distance) {
     double total = distance * fareRate;
     print('Total trip cost in $city: $total CHF.');
@@ -22,6 +25,7 @@ class SwissTaxi extends TransportService {
 }
 
 void main() {
+  // Create an instance of a Swiss taxi service
   var myTaxi = SwissTaxi(
     companyName: 'SwissCab',
     city: 'Lauterbrunnen',
@@ -31,4 +35,3 @@ void main() {
   myTaxi.displayServiceInfo();
   myTaxi.calculateFare(10.0);
 }
-
