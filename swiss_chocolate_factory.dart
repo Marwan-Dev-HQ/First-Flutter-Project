@@ -4,6 +4,7 @@ class Chocolate {
 
   Chocolate({required this.brand, required this.cocoaPercentage});
 
+  // Display general product details
   void showDetails() {
     print('Brand: $brand, Cocoa: $cocoaPercentage%');
   }
@@ -18,6 +19,7 @@ class PremiumChocolate extends Chocolate {
     required this.specialFlavor,
   }) : super(brand: brand, cocoaPercentage: cocoaPercentage);
 
+  // Custom details for premium swiss chocolate
   @override
   void showDetails() {
     print('Premium Swiss $brand with $specialFlavor flavor ($cocoaPercentage% Cocoa).');
@@ -25,6 +27,7 @@ class PremiumChocolate extends Chocolate {
 }
 
 void main() {
+  // Final commit of the day
   var myChocolate = PremiumChocolate(
     brand: 'Lindt',
     cocoaPercentage: 70.0,
@@ -33,4 +36,3 @@ void main() {
 
   myChocolate.showDetails();
 }
-
