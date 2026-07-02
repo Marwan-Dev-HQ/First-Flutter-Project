@@ -1,14 +1,22 @@
+// Abstract Class acting as a strict contract for Authentication Repository
 abstract class AuthRepository {
+  // Abstract method to handle user login
   Future<bool> login(String email, String password);
+
+  // Abstract method to handle user logout
   Future<void> logout();
+
+  // Abstract method to fetch current logged-in user profile data
   Future<Map<String, dynamic>?> getUserProfile();
 }
 
+// Concrete implementation handling remote data operations via Cloud API
 class RemoteAuthRepository implements AuthRepository {
   @override
   Future<bool> login(String email, String password) async {
     print('Connecting to Cloud API server...');
     print('Authenticating credentials for: $email');
+    // Simulating server network response success
     return true; 
   }
 
@@ -28,6 +36,7 @@ class RemoteAuthRepository implements AuthRepository {
   }
 }
 
+// Concrete implementation handling offline data operations via Local Database
 class LocalAuthRepository implements AuthRepository {
   @override
   Future<bool> login(String email, String password) async {
@@ -52,6 +61,7 @@ class LocalAuthRepository implements AuthRepository {
 }
 
 void main() async {
+  // Polymorphism in action: switching between Remote and Local easily
   print('--- SCENARIO 1: App is online, using Remote Server ---');
   AuthRepository authService = RemoteAuthRepository();
   
@@ -69,4 +79,3 @@ void main() async {
   
   await authService.logout();
 }
-
