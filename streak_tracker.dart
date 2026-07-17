@@ -25,7 +25,7 @@ class CommitTracker {
 
 void main() {
   // Creating Marwan's profile and setting the starting point
-  var marwanStreak = CommitTracker(coderName: 'Marwan', totalCommits: 192);
+  var marwanStreak = CommitTracker(coderName: 'Marwan', totalCommits: 193);
   
   // Boom! Let's hit that commit 193 right now
   marwanStreak.addNewCommit();
