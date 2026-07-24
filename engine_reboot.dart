@@ -1,4 +1,4 @@
-
+// Rebooting the system, back to the green square hustle!
 class SystemReboot {
   final String devName;
   final int commitIndex;
@@ -10,6 +10,7 @@ class SystemReboot {
     this.engineStatus = 'Engine rebooted successfully 🇨🇭',
   });
 
+  // Firing up the system for the day
   void executeCheckIn() {
     print('====================================');
     print('Developer: $devName');
@@ -21,11 +22,12 @@ class SystemReboot {
 }
 
 void main() {
+  // Pushing commit #202 directly to GitHub
   var session = SystemReboot(
     devName: 'Marwan',
     commitIndex: 202,
   );
-  
+
+  // Locking down commit #202!
   session.executeCheckIn();
 }
-
