@@ -1,3 +1,5 @@
+// Swiss Time Lock: Late Commit, Unstoppable Vibe! 🇨🇭
+// Clock hits 12, but the streak never breaks.
 
 class SwissTimeLock {
   final String dev;
@@ -10,6 +12,7 @@ class SwissTimeLock {
     this.isStreakActive = true,
   });
 
+  // Printing tonight's late-night execution log
   void logCommit() {
     print('============================================');
     print('Developer: $dev');
@@ -21,9 +24,11 @@ class SwissTimeLock {
 }
 
 void main() {
+  // Locking down today's commit with full precision
   var lateSession = SwissTimeLock(
     dev: 'Marwan',
   );
+
+  // Executing the log now!
   lateSession.logCommit();
 }
-
