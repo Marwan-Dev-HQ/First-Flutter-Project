@@ -1,3 +1,5 @@
+// Swiss Standard: Logic Revival & Brain Calibration 🇨🇭☕
+// Deep focus restored. Brain algorithm back on track.
 
 class LogicRevivalEngine {
   final String dev;
@@ -10,6 +12,7 @@ class LogicRevivalEngine {
     this.isLogicActive = true,
   });
 
+  // Executing logic system calibration
   void calibrateBrain() {
     print('============================================');
     print('Developer: $dev');
@@ -21,10 +24,11 @@ class LogicRevivalEngine {
 }
 
 void main() {
+  // Re-igniting the coding streak
   var logicSession = LogicRevivalEngine(
     dev: 'Marwan',
   );
 
+  // Firing up the logic engine!
   logicSession.calibrateBrain();
 }
-
